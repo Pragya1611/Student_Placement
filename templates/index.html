@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Placement</title>
+</head>
+<body>
+    <style>
+        body {
+          background-image: url('https://img.freepik.com/free-vector/employer-candidate-talking-through-magnifying-glass_1262-21241.jpg?size=626&ext=jpg&ga=GA1.1.819297641.1689153865&semt=ais');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
+        
+
+    <div class="intro">
+    <h1>Student Placement Prediction</h1>
+</div>
+
+
+
+    <form method="POST" action="/predict">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="Age" required>
+        <br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="Gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <br><br>
+
+        <label for="stream">Stream:</label>
+        <select id="stream" name="Stream" required>
+            <option value="Electronics And Communication">Electronics And Communication</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Information Technology">Information Technology</option>
+            <option value="Mechanical">Mechanical</option>
+            <option value="Electrical">Electrical</option>
+            <option value="Civil">Civil</option>
+        </select>
+        <br><br>
+
+        <label for="internships">Internships:</label>
+        <input type="number" id="internships" name="Internships" required>
+        <br><br>
+
+        <label for="cgpa">CGPA:</label>
+        <input type="float" id="cgpa" name="CGPA" min=3.0 step="0.01" required>
+        <br><br>
+
+        <label for="hostel">Hostel:</label>
+        <select id="hostel" name="Hostel" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+        <br><br>
+
+        <label for="backlogs">History of Backlogs:</label>
+        <input type="number" id="backlogs" name="HistoryOfBacklogs" required>
+        <br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    
+<h2>{{prediction}}</h2>
+</body>
+</html>
